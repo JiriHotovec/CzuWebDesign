@@ -6,7 +6,10 @@
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
   --foreground-color: white;
   --background-color: black;
+  --button-primary-color: red;
+  --button-secondary-color: grey;
   --top-menu-rolling-time: 300ms ease-in-out;
+  --max-border-radius: 999px;
 }
 
 *,
@@ -16,7 +19,8 @@
 }
 
 html {
-  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
 }
 
 body {
@@ -26,6 +30,30 @@ body {
 nav a {
   color: var(--foreground-color);
   text-decoration: none;
+}
+
+input[type="text"] {
+  height: 30px;
+  width: 100%;
+  border-radius: 9px;
+}
+
+.button {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: var(--max-border-radius);
+}
+
+.button-subscription {
+  margin-bottom: 5px;
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+}
+
+.button-login {
+  margin-bottom: 5px;
+  background-color: var(--button-primary-color);
+  color: var(--foreground-color);
 }
 
 .grid-layout-menu { grid-area: menu; }
@@ -79,7 +107,7 @@ nav a {
   width: var(--bar-width);
   height: var(--bar-height);
   background-color: var(--foreground-color);
-  border-radius: 999px;
+  border-radius: var(--max-border-radius);
 }
 
 .hamburger-menu input {
@@ -94,15 +122,20 @@ nav a {
   display: flex;
   flex-direction: column;
   position: absolute;
+  width: 100%;
+  padding: 10px;
   /* transition: translate var(--top-menu-rolling-time); */
   /* transform: translateY(100%); */
   translate: -200%;
   background-color: var(--background-color);
   color: var(--foreground-color);
+  gap: 1em;
 }
 
 .flex-top-menu-item {
+  margin-top: 5px;
   text-wrap: nowrap;
+  text-align: center;
 }
 
 .hamburger-menu:has(input:checked) + .flex-top-menu {
@@ -115,29 +148,16 @@ nav a {
 }
 
 .flex-container-item {
-  padding: 10px;
   flex: 100%;
 }
 
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {...} */
+@media (min-width: 768px) {W
+  input[type="text"] {
+    width: 250px;
+  }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...} */
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...} */
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {...} */
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {...} */
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) {
   .flex-container {
-      flex-direction: row;
+    flex-direction: row;
   }
 
   .grid-container {
@@ -157,6 +177,7 @@ nav a {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 30px;
   }
 
   .hamburger-menu {
@@ -167,7 +188,6 @@ nav a {
     position: relative;
     display: flex;
     translate: 0;
-    margin-top: 0;
     flex-direction: row;
     justify-content: flex-end;
   }
