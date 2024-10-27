@@ -1,11 +1,11 @@
 ﻿:root {
-  --bar-width: 60px;
-  --bar-height: 8px;
-  --hamburger-gap: 6px;
-  --hamburger-margin: 5px;
+  --bar-width: 30px;
+  --bar-height: 4px;
+  --hamburger-gap: 5px;
+  --hamburger-margin: 10px;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-  --foreground: #333;
-  --background: white;
+  --foreground-color: white;
+  --background-color: black;
   --top-menu-rolling-time: 300ms ease-in-out;
 }
 
@@ -43,13 +43,15 @@ body {
       'advertisement'
       'subscription'
       'footer';
-  padding: 10px;
-  gap: 10px;
-  background-color: var(--blue);
 }
 
-.grid-container > div {
-background-color: rgba(255, 255, 255, 0.8);
+.grid-layout-menu {
+  background-color: var(--background-color);
+}
+
+.logo {
+  height: 35px;
+  width: auto;
 }
 
 .hamburger-menu {
@@ -69,7 +71,7 @@ background-color: rgba(255, 255, 255, 0.8);
   content: '';
   width: var(--bar-width);
   height: var(--bar-height);
-  background-color: var(--foreground);
+  background-color: var(--foreground-color);
   border-radius: 999px;
 }
 
@@ -88,9 +90,8 @@ background-color: rgba(255, 255, 255, 0.8);
   /* transition: translate var(--top-menu-rolling-time); */
   /* transform: translateY(100%); */
   translate: -200%;
-  margin-top: calc(var(--hamburger-height) + var(--hamburger-margin));
-  background-color: var(--foreground);
-  color: var(--background);
+  background-color: var(--background-color);
+  color: var(--foreground-color);
 }
 
 .flex-top-menu-item {
@@ -147,12 +148,6 @@ background-color: rgba(255, 255, 255, 0.8);
 
   .hamburger-menu {
       display: none;
-  }
-
-  .top-menu {
-      display: inline-block;
-      position: fixed;
-      width: 100%;
   }
 
   .flex-top-menu {
