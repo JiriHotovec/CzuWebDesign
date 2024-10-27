@@ -23,6 +23,11 @@ body {
   margin: 0;
 }
 
+nav a {
+  color: var(--foreground-color);
+  text-decoration: none;
+}
+
 .grid-layout-menu { grid-area: menu; }
 .grid-layout-header { grid-area: header; }
 .grid-layout-main { grid-area: main; }
