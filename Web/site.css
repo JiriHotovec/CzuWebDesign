@@ -148,7 +148,7 @@ input[type="text"] {
   flex: 100%;
 }
 
-@media (min-width: 768px) {W
+@media (min-width: 768px) {
   .flex-container {
     flex-direction: row;
   }
