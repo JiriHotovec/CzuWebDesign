@@ -8,7 +8,6 @@
   --background-color: black;
   --button-primary-color: red;
   --button-secondary-color: grey;
-  --top-menu-rolling-time: 300ms ease-in-out;
   --max-border-radius: 999px;
 }
 
@@ -124,8 +123,6 @@ input[type="text"] {
   position: absolute;
   width: 100%;
   padding: 10px;
-  /* transition: translate var(--top-menu-rolling-time); */
-  /* transform: translateY(100%); */
   translate: -200%;
   background-color: var(--background-color);
   color: var(--foreground-color);
