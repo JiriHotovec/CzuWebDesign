@@ -134,33 +134,40 @@ body {
   }
 
   .grid-container {
-      grid-template-areas:
-          'menu menu menu menu'
-          'header header header header'
-          'main main main weather'
-          'main main main subscription'
-          'main main main advertisement'
-          'main main main advertisement'
-          'short-video short-video short-video advertisement'
-          'short-video short-video short-video advertisement'
-          'footer footer footer footer';
+    grid-template-areas:
+      'menu menu menu menu'
+      'header header header header'
+      'main main main weather'
+      'main main main subscription'
+      'main main main advertisement'
+      'main main main advertisement'
+      'short-video short-video short-video advertisement'
+      'short-video short-video short-video advertisement'
+      'footer footer footer footer';
+  }
+
+  .grid-layout-menu {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
   }
 
   .hamburger-menu {
-      display: none;
+    display: none;
   }
 
   .flex-top-menu {
-      position: relative;
-      display: flex;
-      translate: 0;
-      margin-top: 0;
-      flex-direction: row;
-      justify-content: flex-end;
+    position: relative;
+    display: flex;
+    translate: 0;
+    margin-top: 0;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 
   .flex-top-menu-item:first-child {
-      flex: 1;
-      text-align: right;
+    flex: 1;
+    text-align: right;
   }
 }
