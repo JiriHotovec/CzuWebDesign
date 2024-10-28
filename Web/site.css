@@ -201,6 +201,29 @@ img.news {
   object-fit: cover;
 }
 
+img.video {
+  border-radius: 5px;
+  max-height: 180px;
+  object-fit: cover;
+}
+
+.video-box {
+  position: relative;
+  display: inline-block;
+}
+
+.video-box span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: url(button-play.svg) no-repeat center center;
+  background-size: 20%;
+}
+
 @media (min-width: 768px) {
   main {
     margin-right: 40%;
