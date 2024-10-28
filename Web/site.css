@@ -8,6 +8,7 @@
   --background-color: black;
   --button-primary-color: red;
   --button-secondary-color: grey;
+  --button-secondary-dark-color: rgb(102, 102, 102);
   --max-border-radius: 999px;
 }
 
@@ -38,21 +39,23 @@ input[type="text"] {
 }
 
 .button {
+  padding-top: 1px;
   padding-left: 5px;
   padding-right: 5px;
   border-radius: var(--max-border-radius);
+  text-decoration: none;
 }
 
-.button-subscription {
-  margin-bottom: 5px;
-  background-color: var(--foreground-color);
-  color: var(--background-color);
-}
-
-.button-login {
+.button-primary {
   margin-bottom: 5px;
   background-color: var(--button-primary-color);
   color: var(--foreground-color);
+}
+
+.button-secondary {
+  margin-bottom: 5px;
+  background-color: var(--foreground-color);
+  color: var(--background-color);
 }
 
 .grid-layout-menu { grid-area: menu; }
@@ -75,11 +78,28 @@ input[type="text"] {
       'advertisement'
       'subscription'
       'footer';
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .grid-layout-menu {
   background-color: var(--background-color);
   height: 90px;
+}
+
+main {
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: auto 10px 10px 10px;
+  padding: 10px;
+}
+
+.grid-layout-header {
+  background-image: url(main.jpg);
+  color: var(--foreground-color);
+  height: 430px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .logo {
@@ -149,6 +169,10 @@ input[type="text"] {
 }
 
 @media (min-width: 768px) {
+  main {
+    margin-right: 40%;
+  }
+
   .flex-container {
     flex-direction: row;
   }
