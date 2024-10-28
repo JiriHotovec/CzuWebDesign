@@ -52,6 +52,11 @@ footer {
   text-align: center;
 }
 
+h2 {
+  border-left: 4px solid var(--button-primary-color) ;
+  padding-left: 10px;
+}
+
 .button {
   margin-bottom: 5px;
   padding-top: 1px;
