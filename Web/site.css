@@ -199,18 +199,6 @@ h2 {
   text-decoration: none;
 }
 
-img.news {
-  border-radius: 5px;
-  max-height: 180px;
-  object-fit: cover;
-}
-
-img.video {
-  border-radius: 5px;
-  max-height: 180px;
-  object-fit: cover;
-}
-
 .video-box {
   position: relative;
   display: inline-block;
