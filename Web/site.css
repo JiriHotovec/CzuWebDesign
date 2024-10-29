@@ -22,7 +22,7 @@
 }
 
 html {
-  font-family: 'Roboto', Arial, Helvetica;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 0.9rem;
 }
 
@@ -95,7 +95,7 @@ h2 {
 .grid-layout-main { grid-area: main; }
 .grid-layout-subscription { grid-area: subscription; }
 .grid-layout-weather { grid-area: weather; }
-.grid-layout-short-video { grid-area: short-video; }
+.grid-layout-video { grid-area: video; }
 .grid-layout-advertisement { grid-area: advertisement; }
 .grid-layout-footer { grid-area: footer; }
 
@@ -106,7 +106,7 @@ h2 {
       'header'
       'weather'
       'main'
-      'short-video'
+      'video'
       'advertisement'
       'subscription'
       'footer';
@@ -216,6 +216,82 @@ h2 {
   background-size: 20%;
 }
 
+.weather-widget {
+  font-family: 'Roboto', sans-serif;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  width: 400px;
+  height: 256px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-widget .left-section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+
+.weather-widget .right-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.weather-widget .title {
+  font-family: 'Roboto Black', 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.weather-widget .icon-large {
+  font-size: 82px;
+}
+
+.weather-widget .temp {
+  font-size: 30px;
+  font-family: 'Roboto Black', 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
+.weather-widget .description {
+  font-size: 20px;
+  font-family: 'Roboto Medium', 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.weather-widget .forecast {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.weather-widget .forecast .day {
+  text-align: center;
+  margin-left: 15px;
+}
+
+.weather-widget .forecast .day .day-name {
+  font-size: 30px;
+  font-family: 'Roboto Black', 'Roboto', sans-serif;
+  font-weight: 900
+}
+
+.weather-widget .forecast .day .temp-range {
+  font-size: 20px;
+  font-family: 'Roboto Medium', 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 50px;
+}
+
 @media (min-width: 768px) {
   main {
     margin-right: 40%;
@@ -233,8 +309,8 @@ h2 {
       'main main main subscription'
       'main main main advertisement'
       'main main main advertisement'
-      'short-video short-video short-video advertisement'
-      'short-video short-video short-video advertisement'
+      'video video video advertisement'
+      'video video video advertisement'
       'footer footer footer footer';
   }
 
