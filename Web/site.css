@@ -9,10 +9,12 @@
   --background-light-color: white;
   --background-dark-color: black;
   --button-primary-color: red;
-  --button-secondary-color: grey;
+  --button-secondary-color: rgb(78, 78, 78);
   --button-secondary-light-color: white;
-  --button-secondary-dark-color: rgb(102, 102, 102);
+  --button-secondary-dark-color: black;
+  --grid-layout-margin: 15px;
   --max-border-radius: 999px;
+  --subscription-background-color: #d92626;
 }
 
 *,
@@ -61,13 +63,20 @@ h2 {
   padding-left: 10px;
 }
 
+h3 {
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
 .button {
   margin-bottom: 5px;
   padding-top: 1px;
   padding-left: 5px;
   padding-right: 5px;
   border-radius: var(--max-border-radius);
-  text-decoration: none;
 }
 
 .button-primary {
@@ -77,7 +86,7 @@ h2 {
 
 .button-secondary {
   background-color: var(--button-secondary-color);
-  color: var(--foreground-dark-color);
+  color: var(--foreground-light-color);
 }
 
 .button-secondary-light {
@@ -87,17 +96,52 @@ h2 {
 
 .button-secondary-dark {
   background-color: var(--button-secondary-dark-color);
-  color: var(--foreground-dark-color);
+  color: var(--foreground-light-color);
 }
 
-.grid-layout-menu { grid-area: menu; }
-.grid-layout-header { grid-area: header; }
-.grid-layout-main { grid-area: main; }
-.grid-layout-subscription { grid-area: subscription; }
-.grid-layout-weather { grid-area: weather; }
-.grid-layout-video { grid-area: video; }
-.grid-layout-advertisement { grid-area: advertisement; }
-.grid-layout-footer { grid-area: footer; }
+.button-next {
+  height: 37px;
+}
+
+.grid-layout-menu {
+  grid-area: menu;
+  background-color: var(--background-dark-color);
+  height: 90px;
+}
+.grid-layout-header {
+  grid-area: header;
+  background-image: url(main.jpg);
+  color: var(--foreground-light-color);
+  height: 430px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: var(--grid-layout-margin);
+}
+.grid-layout-main {
+  grid-area: main;
+  margin: var(--grid-layout-margin);
+}
+.grid-layout-subscription
+{ 
+  grid-area: subscription;
+  margin: var(--grid-layout-margin);
+}
+.grid-layout-weather {
+  grid-area: weather;
+  margin: var(--grid-layout-margin);
+}
+.grid-layout-video {
+  grid-area: video;
+  margin: var(--grid-layout-margin);
+}
+.grid-layout-advertisement {
+  grid-area: advertisement;
+  margin: var(--grid-layout-margin);
+}
+.grid-layout-footer {
+  grid-area: footer;
+  margin-top: var(--grid-layout-margin);
+}
 
 .grid-container {
   display: grid;
@@ -113,19 +157,6 @@ h2 {
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.grid-layout-menu {
-  background-color: var(--background-dark-color);
-  height: 90px;
-}
-
-.grid-layout-header {
-  background-image: url(main.jpg);
-  color: var(--foreground-light-color);
-  height: 430px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .logo {
@@ -199,6 +230,16 @@ h2 {
   text-decoration: none;
 }
 
+.news {
+  width: 100%;
+  padding: 10px;
+}
+
+.video {
+  width: 100%;
+  padding: 10px;
+}
+
 .video-box {
   position: relative;
   display: inline-block;
@@ -221,10 +262,10 @@ h2 {
   background-color: #333;
   color: #fff;
   border-radius: 10px;
-  width: 400px;
-  height: 256px;
+  height: 280px;
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 .weather-widget .left-section {
@@ -290,6 +331,27 @@ h2 {
 
 .icon {
   font-size: 50px;
+}
+
+.subscription-container {
+  border-radius: 10px;
+  background-color: var(--subscription-background-color);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.subscription-container p {
+  color: var(--foreground-light-color);
+  font-size: 1.7rem;
+  font-weight: 900;
+  padding-top: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.advertisement {
+  height: 600px;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
