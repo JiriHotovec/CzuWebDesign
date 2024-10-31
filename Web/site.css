@@ -58,6 +58,8 @@ main p {
 footer {
   background-color: var(--background-dark-color);
   text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 footer p {
