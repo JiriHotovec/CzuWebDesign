@@ -74,8 +74,12 @@ footer nav {
   color: var(--foreground-light-color);
 }
 
+footer nav a {
+  text-wrap: nowrap;
+}
+
 h2 {
-  border-left: 4px solid var(--button-primary-color) ;
+  border-left: 4px solid var(--button-primary-color);
   padding-left: 10px;
 }
 
