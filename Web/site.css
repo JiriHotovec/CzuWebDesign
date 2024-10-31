@@ -121,22 +121,25 @@ a {
   grid-area: main;
   margin: var(--grid-layout-margin);
 }
-.grid-layout-subscription
-{ 
-  grid-area: subscription;
-  margin: var(--grid-layout-margin);
-}
-.grid-layout-weather {
-  grid-area: weather;
-  margin: var(--grid-layout-margin);
-}
 .grid-layout-video {
   grid-area: video;
   margin: var(--grid-layout-margin);
 }
+.grid-layout-subscription
+{ 
+  grid-area: subscription;
+  margin: var(--grid-layout-margin);
+  max-width: 400px;;
+}
+.grid-layout-weather {
+  grid-area: weather;
+  margin: var(--grid-layout-margin);
+  max-width: 400px;;
+}
 .grid-layout-advertisement {
   grid-area: advertisement;
   margin: var(--grid-layout-margin);
+  max-width: 400px;;
 }
 .grid-layout-footer {
   grid-area: footer;
@@ -223,6 +226,16 @@ a {
 
 .flex-container-item {
   flex: 100%;
+}
+
+nav.flex-container-item {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .flex-container-item a {
