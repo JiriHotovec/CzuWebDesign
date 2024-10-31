@@ -64,8 +64,6 @@ main p {
 footer {
   background-color: var(--background-dark-color);
   text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 footer p {
@@ -434,6 +432,9 @@ nav.flex-container-item {
 .project-information {
   background-color: var(--projekt-information-background-color);
   color: var(--foreground-light-color);
+  font-weight: var(--weather-font-bold-max);
+  padding: 5px;
+  margin: 10px 0px 0px;
 }
 
 @media (min-width: 768px) {
