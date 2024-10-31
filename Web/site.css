@@ -8,10 +8,10 @@
   --foreground-dark-color: #333;
   --background-light-color: white;
   --background-dark-color: black;
-  --button-primary-color: red;
+  --button-primary-color: #d92626;
   --button-secondary-color: rgb(78, 78, 78);
   --button-secondary-light-color: white;
-  --button-secondary-dark-color: black;
+  --button-secondary-dark-color: #333;
   --button-bold: 700;
   --grid-layout-margin: 15px;
   --max-border-radius: 999px;
@@ -82,11 +82,10 @@ a {
 }
 
 .button {
-  margin-bottom: 5px;
-  padding-top: 3px;
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-bottom: 3px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
   border-radius: var(--max-border-radius);
 }
 
@@ -258,6 +257,16 @@ nav.flex-container-item {
 .news {
   width: 100%;
   padding: 10px;
+}
+
+.category {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.category a:hover {
+  background-color: var(--button-primary-color);
 }
 
 .video {
