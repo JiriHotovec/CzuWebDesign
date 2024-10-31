@@ -15,6 +15,7 @@
   --grid-layout-margin: 15px;
   --max-border-radius: 999px;
   --subscription-background-color: #d92626;
+  --projekt-information-background-color: #d92626;
 }
 
 *,
@@ -56,6 +57,14 @@ main p {
 footer {
   background-color: var(--background-dark-color);
   text-align: center;
+}
+
+footer p {
+  color: var(--foreground-light-color);
+}
+
+footer nav {
+  color: var(--foreground-light-color);
 }
 
 h2 {
@@ -365,6 +374,16 @@ nav.flex-container-item {
 .advertisement {
   height: 600px;
   width: 100%;
+}
+
+.social {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.project-information {
+  background-color: var(--projekt-information-background-color);
+  color: var(--foreground-light-color);
 }
 
 @media (min-width: 768px) {
