@@ -263,9 +263,19 @@ nav.flex-container-item {
 }
 
 .category {
-  margin-left: 10px;
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.category li {
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-wrap: nowrap;
 }
 
 .category a:hover {
