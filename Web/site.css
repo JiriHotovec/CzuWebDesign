@@ -53,9 +53,16 @@ input[type="search"] {
 
 main {
   background-color: rgba(0, 0, 0, 0.6);
-  margin: auto 10px 10px 10px;
-  padding: 10px;
+  height: inherit;
+  width: inherit;
+  
+  .main-wrapper {
+    margin: auto 10px 10px 10px;
+    padding: 10px;
+  }
 }
+
+
 
 main p {
   text-align: justify;
@@ -168,6 +175,10 @@ a {
 .grid-layout-advertisement {
   grid-area: advertisement;
   margin: var(--grid-layout-margin);
+
+  img {
+    border-radius: 10px;
+  }
 }
 .grid-layout-footer {
   grid-area: footer;
@@ -286,6 +297,8 @@ nav.flex-container-item {
   top: 10px;
   right: 10px;
   z-index: 1;
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
 
@@ -442,9 +455,13 @@ nav.flex-container-item {
 }
 
 @media (min-width: 768px) {
+  
   main {
-    margin-right: 40%;
+    .main-wrapper {
+      margin-right: 40%;
+    }
   }
+
 
   .flex-container {
     flex-direction: row;
