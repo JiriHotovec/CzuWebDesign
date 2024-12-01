@@ -471,13 +471,13 @@ nav.flex-container-item {
   margin: 10px 0px 0px;
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1400px) {
   .flex-container-item:nth-last-child(2) {
     display: none;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   .main-wrapper {
     padding-right: 40%;
   }
