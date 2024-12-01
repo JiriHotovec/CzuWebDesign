@@ -215,8 +215,8 @@ a {
       'main'
       'video'
       'weather'
-      'advertisement'
-      'subscription';
+      'subscription'
+      'advertisement';
 }
 
 .logo {
@@ -347,7 +347,6 @@ nav.flex-container-item {
 
 .video-box {
   position: relative;
-  display: inline-block;
 }
 
 .video-box span {
@@ -470,6 +469,12 @@ nav.flex-container-item {
   font-weight: var(--weather-font-bold-max);
   padding: 5px;
   margin: 10px 0px 0px;
+}
+
+@media (max-width: 1260px) {
+  .flex-container-item:nth-last-child(2) {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
