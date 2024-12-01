@@ -90,6 +90,11 @@ a {
   border-radius: var(--border-radius);
 }
 
+.main-wrapper h2 {
+  border-left: none;
+  padding-left: 0px;
+}
+
 .main-wrapper p {
   text-align: justify;
 }
