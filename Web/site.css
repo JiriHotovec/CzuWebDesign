@@ -21,6 +21,7 @@
   --weather-font-bold-max: 900;
   --grid-layout-margin: 15px;
   --max-border-radius: 999px;
+  --border-radius: 10px;
   --subscription-background-color: #d92626;
   --projekt-information-background-color: #d92626;
 }
@@ -51,21 +52,6 @@ input[type="search"] {
   border-radius: 9px;
 }
 
-main {
-  background-color: rgba(0, 0, 0, 0.6);
-  height: inherit;
-  width: inherit;
-  
-  .main-wrapper {
-    margin: auto 10px 10px 10px;
-    padding: 10px;
-  }
-}
-
-main p {
-  text-align: justify;
-}
-
 footer {
   background-color: var(--background-dark-color);
   text-align: center;
@@ -94,6 +80,18 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+.main-wrapper {
+  height: inherit;
+  width: inherit;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: var(--border-radius);
+}
+
+.main-wrapper p {
+  text-align: justify;
 }
 
 .button {
@@ -149,7 +147,8 @@ a {
   height: 430px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: var(--grid-layout-margin);
+  margin: var(--grid-layout-margin);
+  border-radius: var(--border-radius);
 }
 
 .grid-layout-main {
@@ -168,6 +167,11 @@ a {
   margin: var(--grid-layout-margin);
 }
 
+.grid-layout-subscription p
+{ 
+  margin-top: 0px;
+}
+
 .grid-layout-weather {
   grid-area: weather;
   margin: var(--grid-layout-margin);
@@ -178,7 +182,7 @@ a {
   margin: var(--grid-layout-margin);
 
   img {
-    border-radius: 10px;
+    border-radius: var(--border-radius);
   }
 }
 
@@ -191,16 +195,23 @@ a {
   display: grid;
   grid-template-areas:
       'menu'
-      'header'
-      'weather'
-      'main'
-      'video'
-      'advertisement'
-      'subscription'
+      'content'
       'footer';
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.grid-subcontainer {
+  grid-area: content;
+  display: grid;
+  grid-template-areas:
+      'header'
+      'main'
+      'video'
+      'weather'
+      'advertisement'
+      'subscription';
 }
 
 .logo {
@@ -350,7 +361,7 @@ nav.flex-container-item {
   font-family: var(--weather-font-family-light);
   background-color: #333;
   color: #fff;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   height: 280px;
   display: flex;
   justify-content: space-between;
@@ -423,7 +434,7 @@ nav.flex-container-item {
 }
 
 .subscription-container {
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   background-color: var(--subscription-background-color);
   text-align: center;
   padding-bottom: 20px;
@@ -456,26 +467,23 @@ nav.flex-container-item {
   margin: 10px 0px 0px;
 }
 
-@media (min-width: 768px) {
-  main {
-    .main-wrapper {
-      margin-right: 40%;
-    }
+@media (min-width: 1024px) {
+  .main-wrapper {
+    padding-right: 40%;
   }
 
   .flex-container {
     flex-direction: row;
   }
 
-  .grid-container {
+  .grid-subcontainer {
+    grid-template-columns: auto 400px;
     grid-template-areas:
-      'menu menu menu menu menu'
-      'header header header header header'
-      'main main main main weather'
-      'main main main main subscription'
-      'main main main main advertisement'
-      'video video video video advertisement'
-      'footer footer footer footer footer ';
+      'header subscription'
+      'main weather'
+      'main advertisement'
+      'main advertisement'
+      'video advertisement';
   }
 
   .grid-layout-menu {
