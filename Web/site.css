@@ -88,6 +88,7 @@ a {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: var(--border-radius);
+  align-content: flex-end;
 }
 
 .main-wrapper h2 {
