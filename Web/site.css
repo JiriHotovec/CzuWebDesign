@@ -445,13 +445,30 @@ nav.flex-container-item {
   padding-bottom: 20px;
 }
 
-.subscription-container p {
+#subscriptionHeader {
   color: var(--foreground-light-color);
   font-size: 1.7rem;
   font-weight: 900;
-  padding-top: 70px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#subscriptionDescription {
+  color: var(--foreground-light-color);
+  font-size: 1.2rem;
+  font-weight: 900;
+  padding-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#subscriptionFooter {
+  color: var(--foreground-light-color);
+  font-size: 1rem;
+  padding-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .advertisement {
