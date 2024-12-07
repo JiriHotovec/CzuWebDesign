@@ -82,6 +82,10 @@ a {
   text-decoration: none;
 }
 
+#labelSearch {
+  display: none;
+}
+
 .main-wrapper {
   height: inherit;
   width: inherit;
